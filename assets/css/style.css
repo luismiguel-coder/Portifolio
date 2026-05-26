@@ -1,0 +1,97 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+
+body { 
+    background-color: #f0f4f8; 
+    
+    font-family: Arial, Helvetica, sans-serif; 
+    color: #333333; 
+    /* Trocado 20px por 1.25rem para escalar com a fonte do usuário */
+    padding: 1.25rem; 
+    line-height: 1.6; /* Melhora a leitura do texto */
+} 
+
+
+h1 { 
+    color: #0056b3; 
+    text-align: center; /* Alinhamento centralizado  */
+    /* rem para fontes e espaçamentos é a solução moderna  */
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    color: #0056b3;
+    margin-bottom: 1rem;
+}
+
+
+main {
+    /* Uso de largura fluida (%) para se adaptar a diferentes telas  */
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto; /* Centralizar */
+}
+
+section {
+    background-color: #ffffff;
+    padding: 2rem; /* Espaçamento interno proporcional */
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    /* Evitar height fixa para o conteúdo não "vazar" em telas menores  */
+    min-height: auto; 
+}
+/* Organiza o formulário para que labels e inputs fiquem um abaixo do outro */
+#contato form {
+    display: flex;
+    flex-direction: column; /* Empilha os elementos verticalmente */
+    gap: 1rem; /* Cria um espaçamento proporcional entre os campos  */
+    max-width: 500px; /* Evita que o formulário fique largo demais */
+}
+
+/* Garante que a label e o campo estejam alinhados à esquerda */
+#contato label {
+    font-weight: bold;
+    margin-bottom: 0.25rem; /* Ajuste fino usando rem [4] */
+    text-align: left; /* Garante o alinhamento do texto [5] */
+}
+
+/* Estiliza o campo de mensagem especificamente */
+textarea {
+    resize: vertical; /* Permite ao usuário aumentar a altura, mas não a largura */
+    padding: 0.8rem; /* Espaço interno para o texto não encostar na borda */
+    border-radius: 8px; /* Ajuste fino para cantos arredondados */
+    border: 1px solid #ccc;
+}
+
+nav ul {
+    list-style: none; /* Remove as bolinhas do menu */
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+nav a {
+    text-decoration: none; /* Remove o sublinhado dos links  */
+    color: #0056b3;
+    font-weight: bold;
+}
+
+ul {
+    padding-left: 1.2rem;
+}
+
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid #d1d9e0;
+}
+
