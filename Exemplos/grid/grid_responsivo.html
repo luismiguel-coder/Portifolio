@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Grid Responsivo</title>
+    
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns:
+             /*200px 200px 200px;*/
+            0.5fr 0.5fr 0.5fr;
+            color: red;
+            gap : 2px
+        }
+
+        .back {
+            background-color: black;
+            /*margin:5px;*/
+            padding: 5px;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+  <div class="container">
+   
+    <div class="back">1</div>
+    <div class="back">2</div>
+    <div class="back">3</div>
+ </div>
+</body>
+</html>
