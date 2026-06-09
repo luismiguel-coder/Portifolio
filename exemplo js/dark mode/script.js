@@ -1,5 +1,9 @@
 const btn = document.querySelector("#tema")
 
 btn.addEventListener("click", function() {
-    document.body.classList.toggle("dark")
+    localStorage.setItem("tema", "dark")
+    const temaSalvo = localStorage.getItem("tema")
+    if (temaSalvo === "dark") {
+        document.body.classList.add("dark")
+    }
 });
