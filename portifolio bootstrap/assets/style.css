@@ -1,0 +1,21 @@
+body{
+    background-color: #f8f9fa;
+}
+
+.foto-perfil{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card{
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+}
+
+footer{
+    margin-top: 50px;
+}

@@ -45,12 +45,14 @@ formulario.addEventListener("submit", event => {
 });
 
 function adicionarTarefa(titulo) {
-    const transaction = db.transaction("tarefas", "readwrite");
+    const transaction = db.transaction("tarefas",
+        "readwrite");
     const store = 
     transaction.objectStore("tarefas");
 
     const tarefa = { titulo : titulo, concluida : false };
     store.add(tarefa);
+    
     transaction.oncomplete = () => {
         carregarTarefas();
     };
@@ -59,14 +61,16 @@ function adicionarTarefa(titulo) {
 
 function carregarTarefas() {
     lista.innerHTML = "";
-    const transaction = db.transaction("tarefas", "readonly");
-    const store = transaction.objectStore("tarefas");
 
+    const transaction = db.transaction("tarefas", "readonly");
+    
+    const store = 
+    transaction.objectStore("tarefas");
     const request = store.getAll();
     
     request.onsuccess = () => {
         const tarefas = request.result;
-        tarefas.forEach(tarefa => 
+            tarefas.forEach(tarefa => 
             criarItemNaTela(tarefa));
             atualizarContador(tarefas.length);
         };
